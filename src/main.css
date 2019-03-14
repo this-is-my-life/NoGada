@@ -1,0 +1,20 @@
+#input {
+  box-shadow: 0px 0px 3px 1px #0000003f;
+  margin-top: 7px;
+  margin-left: 5px;  
+  resize: none;
+  float: left;
+  width: 49%;
+  height: 88vh;
+}
+
+#output {
+  box-shadow: 0px 0px 3px 1px #0000003f;
+  background-color: lightgray;
+  margin-top: 7px;
+  margin-right: 5px;
+  resize: none;
+  float: right;
+  width: 49%;
+  height: 88vh;
+}

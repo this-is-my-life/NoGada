@@ -1,0 +1,37 @@
+{
+  "name": "proj-nogada",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nogada.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac64": "electron-packager ./ No가다 --app-copyright=\"Copyright (c) 2019. PMH Studio.\" --app-version=\"v0.0.1\" --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "package-win32": "electron-packager ./ No가다 --app-copyright=\"Copyright (c) 2019. PMH Studio.\" --overwrite --asar --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=\"PMHStudio\" --version-string.FileDescription=\"No가다 실험판\" --version-string.ProductName=\"No가다 Dev\"",
+    "package-win64": "electron-packager ./ No가다 --app-copyright=\"Copyright (c) 2019. PMH Studio.\" --overwrite --asar --platform=win32 --arch=x64 --prune=true --out=release-builds --version-string.CompanyName=\"PMHStudio\" --version-string.FileDescription=\"No가다 실험판\" --version-string.ProductName=\"No가다 Dev\"",
+    "package-linux64": "electron-packager ./ No가다 --app-copyright=\"Copyright (c) 2019. PMH Studio.\" --app-version=\"v0.0.1\" --overwrite --asar --platform=linux --arch=x64 --prune=true --out=release-builds",
+    "package-linux32": "electron-packager ./ No가다 --app-copyright=\"Copyright (c) 2019. PMH Studio.\" --app-version=\"v0.0.1\" --overwrite --asar --platform=linux --arch=ia32 --prune=true --out=release-builds",
+    "build": "npm run package-mac64 && npm run package-win32 && npm run package-win64 && npm run package-linux64 && npm run package-linux32"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PMHStudio/NoGada.git"
+  },
+  "author": "PMH Studio / PMH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PMHStudio/NoGada/issues"
+  },
+  "homepage": "https://github.com/PMHStudio/NoGada#readme",
+  "devDependencies": {
+    "electron": "^4.0.8",
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "dependencies": {
+    "strutil": "^0.1.0"
+  }
+}
