@@ -11,6 +11,7 @@ function createMainWindow () {
   })
   mainWindow.setMenu(null)
   mainWindow.loadFile('./src/main.html')
+  mainWindow.toggleDevTools()
   mainWindow.on('closed', () => {
     mainWindow = null
   })
