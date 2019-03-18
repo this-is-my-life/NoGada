@@ -4,11 +4,34 @@ let mainWindow
 
 function createMainWindow () {
   mainWindow = new electron.BrowserWindow({
-    minWidth: 800,
-    minHeight: 600,
-    width: 800,
-    height: 600
+    minWidth: 1500,
+    minHeight: 700,
+    width: 1500,
+    height: 700
   })
+  mainWindow.setMenu(null)
+  mainWindow.loadFile('./src/main.html')
+  mainWindow.on('closed', () => {
+    mainWindow = null
+  })
+}
+
+app.on('ready', () => {
+  createMainWindow()
+})
+
+app.on('activate', () => {
+  if (mainWindow) {
+    createMainWindow()
+  }
+})
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+
   mainWindow.setMenu(null)
   mainWindow.loadFile('./src/main.html')
   mainWindow.toggleDevTools()
