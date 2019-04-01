@@ -40,6 +40,14 @@ function processing () {
   if (document.getElementById('deleteLF').checked) {
     output = output.split('\\n').join('\n')
   }
+  if (document.getElementById('add<br />').checked) {
+    output = lineByline.join('<br />\n')
+  }
+  if (document.getElementById('delete<br />').checked) {
+    output = output.split('<br />').join('')
+    output = output.split('<br>').join('')
+    output = output.split('<br/>').join('')
+  }
 
   document.getElementById('output').value = output
 }
