@@ -18,7 +18,7 @@
   "homepage": "https://github.com/PMHStudio/NoGada#readme",
   "devDependencies": {
     "app-builder-lib": "~20.39.0",
-    "electron": "^4.0.8",
+    "electron": "^7.2.4",
     "electron-builder": "^20.39.0",
     "electron-builder-squirrel-windows": "^20.39.0",
     "eslint": "^5.15.1",
